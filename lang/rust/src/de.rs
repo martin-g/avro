@@ -804,13 +804,10 @@ mod tests {
                 ("type".to_owned(), Value::String("Val1".to_owned())),
                 (
                     "value".to_owned(),
-                    Value::Union(
-                        0,
-                        Box::new(Value::Record(vec![
-                            ("x".to_owned(), Value::Float(1.0)),
-                            ("y".to_owned(), Value::Float(2.0)),
-                        ])),
-                    ),
+                    Value::Union(0, Box::new(Value::Record(vec![
+                        ("x".to_owned(), Value::Float(1.0)),
+                        ("y".to_owned(), Value::Float(2.0)),
+                    ]))),
                 ),
             ]),
         )]);
@@ -833,10 +830,17 @@ mod tests {
                 ("type".to_owned(), Value::String("Val1".to_owned())),
                 (
                     "value".to_owned(),
+<<<<<<< HEAD
                     Value::Union(
                         0,
                         Box::new(Value::Array(vec![Value::Float(1.0), Value::Float(2.0)])),
                     ),
+=======
+                    Value::Union(0, Box::new(Value::Array(vec![
+                        Value::Float(1.0),
+                        Value::Float(2.0),
+                    ]))),
+>>>>>>> b14cdb2d (AVRO-3248: Rust: Support named types in UnionSchema)
                 ),
             ]),
         )]);
