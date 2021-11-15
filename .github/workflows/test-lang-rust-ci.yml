@@ -22,9 +22,9 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-#    paths:
-#      - .github/workflows/test-lang-rust-ci.yml
-#      - lang/rust/**
+    paths:
+      - .github/workflows/test-lang-rust-ci.yml
+      - lang/rust/**
 
 defaults:
   run:
