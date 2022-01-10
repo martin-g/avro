@@ -133,7 +133,7 @@ pub fn encode_ref(value: &Value, schema: &Schema, buffer: &mut Vec<u8>) {
                     encode_long(*idx as i64, buffer);
                     encode_ref0(&*item, inner_schema, buffer, schemas_by_name);
                 } else {
-                    error!("invalid schema type for Union: {:?}", schema);
+                    error!("invalid schema type for Array: {:?}", schema);
                 }
             }
             Value::Array(items) => {
