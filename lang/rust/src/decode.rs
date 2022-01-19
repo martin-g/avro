@@ -225,7 +225,7 @@ pub fn decode<R: Read>(schema: &Schema, reader: &mut R) -> AvroResult<Value> {
                     }
                 }
                 Err(io_err) => Err(io_err),
-            },
+            }
             Schema::Record {
                 ref name,
                 ref fields,
