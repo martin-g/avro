@@ -173,7 +173,7 @@ where
     T: Into<Self>,
 {
     fn from(value: Option<T>) -> Self {
-        // NOTE: this is incorrect in case first type in union is not "none"
+        // FIXME: this is incorrect in case first type in union is not "none"
         Self::Union(
             value.is_some() as i32,
             Box::new(value.map_or_else(|| Self::Null, Into::into)),
